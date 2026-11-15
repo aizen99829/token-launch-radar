@@ -177,41 +177,49 @@ const LAUNCHED: Record<Family, (c: Ctx) => string[]> = {
     `${c.symbol} already trades: stake it in ${c.name}'s security or fee-sharing programme if one is live — a single deposit of ${c.capital} in token value, about ${c.gas} in gas.`,
     `Keep bridging through ${c.name} for your real transfers: fee discounts and relayer rewards for token holders have historically been paid to users, not speculators.`,
     `Provide ${c.symbol} liquidity on ${c.chain} so your position earns LP fees while the bridge's volume grows into the token's fee base.`,
+    `Review the position quarterly: bridge tokens re-rate on volume, so check that its routed volume is still growing before adding, and trim if two straight quarters shrink.`,
   ],
   staking: (c) => [
     `${c.symbol} already trades: hold the liquid staking position as usual and add the token position — stake or delegate ${c.symbol} where its own staking programme runs, about ${c.gas} a transaction.`,
     `Use the receipt token in one lending market and vote with ${c.symbol} in the same week each month; the combined profile is what partner protocols snapshot for their own drops.`,
     `Claim and compound both reward streams monthly, ten minutes a month, rather than selling them: compounding is the whole point of a staking asset that also has a token.`,
+    `Keep the unstake path rehearsed: know the current exit queue length for both the stake and the token lock before you need either, and never let both sit behind long queues at once.`,
   ],
   yield: (c) => [
     `${c.symbol} already trades: stake it for the protocol's revenue share if offered, and keep ${c.capital} in its flagship vault so you earn both the vault yield and the token's.`,
     `Provide ${c.symbol} liquidity on ${c.chain} and stake the LP position in its gauge; rebalanced once a month in about 15 minutes.`,
     `Stay through emissions schedules rather than rotating out at the first dip: vault loyalty and holding duration are both on-chain and both get snapshotted by partners.`,
+    `Compare the vault's net yield against its own token's staking yield once a quarter and hold the better side; loyalty is a strategy, not a default.`,
   ],
   derivatives: (c) => [
     `${c.symbol} already trades: stake it for fee rebates on ${c.name} first — the rebate is worth more than the staking yield to anyone who trades weekly.`,
     `Keep your normal trading volume on ${c.name} with leverage under 3x; volume tiers now pay in fee discounts and ${c.symbol} rewards rather than promises.`,
     `Provide to its insurance or vault pool with ${c.capital} if you want the other side of the trade flow, and review the position monthly.`,
+    `Withdraw staking rewards on a schedule — monthly, ten minutes — instead of letting them accumulate unclaimed through a full market cycle.`,
   ],
   exchange: (c) => [
     `${c.symbol} already trades: hold the amount its VIP and launchpool tiers require on ${c.name} — the tier benefits and sale allocations are the real farm for an exchange token.`,
     `Enrol every launchpool with your held balance as campaigns open; five minutes each, and allocations scale with the balance you already keep there.`,
     `Route your ordinary trading through ${c.name} to hold your fee tier, reviewing the tier thresholds once a month against your actual volume.`,
+    `Keep the account's records — statements, campaign enrolments, tier history — exported quarterly; exchange programmes are the ones most often settled from account history rather than chain data.`,
   ],
   chain: (c) => [
     `${c.symbol} is the chain's own asset and already trades: delegate ${c.capital} of it to a mid-size validator — one transaction, about ${c.gas} — and claim staking rewards monthly.`,
     `Stay active across the chain's native apps as before; ecosystem drops on a launched chain snapshot the same active-day and breadth metrics.`,
     `Hold a slice of ${c.symbol} unstaked for governance votes: chains reward voters in later ecosystem rounds more reliably than passive holders.`,
+    `Re-delegate if your validator falls out of the active set or raises commission twice; five minutes to switch, and a jailed validator earns nothing while you decide.`,
   ],
   rwa: (c) => [
     `${c.symbol} already trades: hold it alongside the product position — deposit ${c.capital} into the flagship tokenised product and keep the token in the same wallet that holds the shares.`,
     `Stay through at least two yield distributions so both records — product holder and token holder — cover the same full periods.`,
     `Provide ${c.symbol} liquidity only if a pool with real depth exists on ${c.chain}; thin RWA token pools charge more in slippage than they pay in fees.`,
+    `Keep KYC and account records current with the platform; in this category an expired document, not a market move, is the usual reason a payout or conversion stalls.`,
   ],
   generic: (c) => [
     `${c.symbol} already trades: the farm is holding and using it — keep ${c.capital} in the token and use ${c.name}'s product weekly so both records agree.`,
     `Stake ${c.symbol} in any programme the protocol runs, about ${c.gas} a transaction, and claim rewards monthly rather than letting them idle.`,
     `Provide liquidity for the ${c.symbol} pair on ${c.chain} if a real pool exists, sized so a bad week cannot cost you more than the season's expected rewards.`,
+    `Vote in its governance at least once a quarter and keep the wallet that holds ${c.symbol} the same one that uses the product: partner snapshots read both records together.`,
   ],
 };
 
